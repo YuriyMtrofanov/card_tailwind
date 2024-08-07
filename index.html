@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Card created using Tailwind</title>
+</head>
+<body class="h-screen flex items-center justify-center">
+    <div class="card">
+        <div class="card__wrapper flex flex-col justify-between min-w-80 max-w-110 h-96 shadow-lg">
+            <div class="card__image relative w-full h-full bg-gray-300 overflow-hidden">
+                <div class="subbutton absolute top-2.5 right-2.5 px-2 py-1 flex items-center justify-center text-xs font-medium rounded-md bg-white text-gray-800">
+                    button
+                </div>
+            </div>
+            <!-- Тело карточки, при наведении на которую появляется контент карточки -->
+            <div class="card__body flex flex-col justify-around items-center h-max px-4 py-3 group transition transform translate-y-4 delay-500 transform-none">
+                <div class="header flex justify-between text-sm font-normal w-full mb-2">
+                    <div class="header__wrapper flex flex-col">
+                        <div class="subheader text-sm font-normal text-gray-500">Subheader</div>
+                        <div class="text-xl font-medium text-gray-800">Header</div>
+                    </div>
+                    <div class="header__text flex items-center justify-center text-lg font-semibold text-gray-800">Text</div>
+                </div>
+                <!-- Всплывающая часть контента карточки, появляющаяся при наведении на родительский блок "card__body" -->
+                <div class="content w-full py-2 border-t-2 border-grey-200 hidden group-hover:block">
+                    <div class="content__text flex justify-between mt-0 py-1">
+                        <p class="text-sm font-normal text-gray-500">Text</p>
+                        <a class="text-sm font-normal text-gray-800" href="#">Link</a>
+                    </div>
+                    <div class="content__text flex justify-between mt-0 py-1">
+                        <p class="text-sm font-normal text-gray-500">Text</p>
+                        <a class="text-sm font-normal text-gray-800" href="#">Link</a>
+                    </div>
+                    <div class="content__text flex justify-between mt-0 py-1">
+                        <p class="text-sm font-normal text-gray-500">Text</p>
+                        <a class="text-sm font-normal text-gray-800" href="#">Link</a>
+                    </div>
+                    <div class="content__text flex justify-between mt-0 py-1">
+                        <p class="text-sm font-normal text-gray-500">Text</p>
+                        <a class="text-sm font-normal text-gray-800" href="#">Link</a>
+                    </div>
+                </div>
+                <div class="button flex items-center justify-center w-full px-2 py-2 text-white text-base font-semibold bg-gray-500 rounded-lg">
+                    Button
+                </div>
+                <div class="sub-text p-1 text-xs font-normal text-gray-500 ">Sub text</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
